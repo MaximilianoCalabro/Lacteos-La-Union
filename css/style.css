@@ -12,14 +12,16 @@
 	2. Basic styles
 	3. BUTTONS
 	4. HEADER
-	5. QUESOS
-	6. QUIENES SOMOS
+	5. quesos
+	6. quienes-somos
 	7. OUR WORKS
-	8. UBICACION
+	8. ubicacion
 	9. ABOUT US
 	10. OUR TEAM
+	11. TESTIMONIAL
 	12. FUN FACTS
 	13. CONTACT
+	14. BLOG
 	15. FOOTER
 	16. SCROLL TO TOP
 
@@ -32,9 +34,11 @@
 	@import url("http://fonts.googleapis.com/css?family=Raleway:200,300,600,700&subset=latin,latin-ext");
 
 
+
+
 /* 2. BASIC STYLES */
 
-	html, body 
+	html, body {
 		height: 100%;
 	}
 
@@ -175,6 +179,8 @@
 	}
 
 
+
+
 /* 4. HEADER */
 
 	#header{}
@@ -197,14 +203,14 @@
 	.st-navbar ul li a{
 		text-transform: uppercase;
 		font-weight: 600;
-		padding: 0;
+		padding: 20;
 		margin: 14px;
 	}
 
 	.st-navbar ul li a:hover,
 	.st-navbar ul li a:focus {
-		background-color: transparent;
-		color: #9C9C9C;
+		background-color: black;
+		color: white;
 	}
 
 	.st-navbar .navbar-header{
@@ -223,13 +229,14 @@
 	}
 
 
-/* 5. QUESOS */
+
+/* 5. quesos */
 
 	#quesos{
 		margin-top: 80px;
 	}
 
-	#home-carousel  .item {
+	#home-carousel .item {
 		background-position: center top;
 		background-repeat: no-repeat;
 		background-size:cover;
@@ -237,7 +244,7 @@
 		height: 650px;
 	}
 
-	#home-carousel .item:before{
+	#home-carousel .item:before {
 		background-color: #000;
 		content: "";
 		height: 100%;
@@ -308,6 +315,15 @@
 		left:0;
 	}
 
+	.home-carousel-left:hover {
+		background: black;
+		color: white;
+	}
+	.home-carousel-right:hover {
+		background: black;
+		color: white;
+	}
+
 	#home-carousel:hover .home-carousel-right {
 		right:0;
 	}
@@ -315,7 +331,8 @@
 
 	#home-carousel .item h1, 
 	#home-carousel .item h2, 
-	#home-carousel .item p {
+	#home-carousel .item p,
+	 #home-carousel .item iframe {
 		opacity:0;
 		-moz-transform: scale(0.5);
 		-webkit-transform: scale(0.5);
@@ -334,7 +351,8 @@
 
 	#home-carousel .item.active h1, 
 	#home-carousel .item.active h2, 
-	#home-carousel .item.active p {
+	#home-carousel .item.active p,
+	#home-carousel .item iframe {
 		opacity:1;
 		-moz-transform: scale(1);
 		-webkit-transform: scale(1);
@@ -359,8 +377,17 @@
 		transition: all 0.5s ease-in-out 0.45s;
 	}
 
+	#home-carousel .item iframe {
+		-webkit-transition: all 0.5s ease-in-out 0.45s;
+		-moz-transition: all 0.5s ease-in-out 0.45s;
+		-ms-transition: all 0.5s ease-in-out 0.45s;
+		-o-transition: all 0.5s ease-in-out 0.45s;
+		transition: all 0.5s ease-in-out 0.45s;
+	}
 
-/* 6. QUIENES SOMOS */
+
+
+/* 6. quienes-somos */
 
 	#quienes-somos{
 		background-color: #f5f5f5;
@@ -391,6 +418,7 @@
 	}
 
 	.st-service p{}
+
 
 
 /* 7. OUR WORKS */
@@ -495,7 +523,8 @@
 	}
 
 
-/* 8. UBICACION */
+
+/* 8. ubicacion */
 	
 	#ubicacion{
 		background-color: #f5f5f5;
@@ -600,8 +629,18 @@
 		left:-32px;
 	}
 
+	.office-carousel-left:hover {
+		background: black;
+		color: white;
+	}
+
 	.office-carousel-right {
 		right:-32px;
+	}
+
+	.office-carousel-right:hover {
+		background: black;
+		color: white;
 	}
 
 	#office-carousel:hover .office-carousel-left {
@@ -612,15 +651,16 @@
 		right:0;
 	}
 
-	#office-carousel .item img{
+	#office-carousel .item img,
+	#office-carousel .item iframe {
 		width: 100%;
 	}
-	
-	iframe {
-	max-width: 100%;
-	height: auto;
-	}
 
+	#office-carousel {
+		max-width: 600px;
+		max-height: 400px;
+	}
+	
 
 /* 10. OUR TEAM */
 
@@ -693,6 +733,70 @@
 	}
 
 
+
+/* 11. TESTIMONIAL */
+
+	#testimonial{
+		background-image: url(../images/testimonial-bg.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		padding-top: 100px;
+		padding-bottom: 100px;
+		position: relative;
+	}
+
+	.st-testimonials{
+		color: #e0e0e0;
+	}
+
+	.st-testimonials .st-border{
+		background-color: #e0e0e0;
+		margin: 20px auto;
+	}
+
+	.st-testimonials p{
+		font-style: italic;
+	}
+
+	.st-testimonials .client-info h5{
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+
+	.st-testimonials .client-info span{
+		font-size: 12px;
+		text-transform: uppercase;
+	}
+
+
+
+/* 12. FUN FACTS */
+	
+	#fun-facts{
+		background-color: #f5f5f5;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	#fun-facts .fun-fact{
+		border-right: 1px solid #ddd;
+	}
+
+	#fun-facts .col-md-3:last-child .fun-fact{
+		border-right: 0px solid #ddd;
+	}
+
+	#fun-facts .fun-fact i{
+		margin-right: 5px;
+	}
+
+	#fun-facts .fun-fact p{
+		font-size: 16px;
+	}
+
+
+
 /* 13. CONTACT */
 
 	#contact{
@@ -729,6 +833,192 @@
 		width: 100%;
 		margin-bottom: 20px;
 	}
+
+
+
+/* 14. BLOG */
+	
+	#page-header{
+		background-color: #f5f5f5;
+		padding-top: 50px;
+		padding-bottom: 0px;
+		position: relative;
+		margin-bottom: 50px;
+		margin-top: 80px;
+	}
+
+	.single-blog{
+		margin-top: 35px;
+		margin-bottom: 35px;
+	}
+
+	.post-title{
+		margin-top: 20px;
+		margin-bottom: 5px;
+	}
+
+	.post-meta{
+		margin-bottom: 15px;
+	}
+
+	.post-meta span{
+		margin-right: 6px;
+		font-size: 12px;
+		font-weight: 600;
+		opacity: 0.6;
+	}
+
+	.post-meta span:hover{
+		opacity: 1;
+	}
+
+	.post-carousel-left, 
+	.post-carousel-right {	
+		background-color: #f0f0f0;
+		color:#000;
+		font-size: 32px;
+		height: 40px;
+		line-height: 40px;
+		margin-top: -20px;
+		position: absolute;
+		text-align: center;
+		top: 50%;
+		width: 32px;
+		z-index: 999;
+		-webkit-transition: 300ms;
+		-moz-transition: 300ms;
+		-o-transition: 300ms;
+		-ms-transition: 300ms;
+		transition: 300ms;
+	}
+
+	.post-carousel-left {
+		left:-32px;
+	}
+
+	.post-carousel-right {
+		right:-32px;
+	}
+
+	#post-carousel:hover .post-carousel-left {
+		left:0;
+	}
+
+	#post-carousel:hover .post-carousel-right {
+		right:0;
+	}
+
+	.post-link{
+		background-color: #f5f5f5;
+		text-align: center;
+		padding: 40px 0;
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	.post-quote{
+		background-color: #f5f5f5;
+		padding: 30px;
+		font-size: 16px;
+		font-weight: 500;
+		font-style: italic;
+	}
+
+	.sidebar-widget{
+		margin-top: 35px;
+		margin-bottom: 50px;
+	}
+
+	.sidebar-widget .sidebar-title{
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+
+	.sidebar-widget ul{
+		list-style: square;
+		margin: 0;
+		padding-left: 18px;
+	}
+
+	.sidebar-widget ul li{
+		margin-bottom: 10px;
+		font-weight: 500;
+	}
+
+	.blog-search{
+		position: relative;
+	}
+
+	.blog-search input {
+		border: 1px solid #d6d6d6;
+		color: #8d8d8d;
+		height: 44px;
+		outline: medium none;
+		padding: 0 50px 0 17px;
+		width: 100%;
+	}
+
+	.blog-search span {
+		color: #252525;
+		font-size: 12px;
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+	}
+
+	.blog-search .search-submit {
+		background: none;
+		border: none;
+	}
+
+	.blog-search:after {
+		background-color: #d6d6d6;
+		content: "";
+		display: block;
+		height: 27px;
+		position: absolute;
+		right: 40px;
+		top: 50%;
+		transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		width: 1px;
+	}
+
+	.sidebar-widget .tagcloud a{
+		padding: 4px 10px;
+		border: 1px solid #ccc;
+		margin: 3px 1px;
+		display: inline-block;
+	}
+
+	.sidebar-widget .tagcloud a:hover{
+		border-color: #000;
+		color: #000;
+	}
+
+	ul.content-flickr {
+		margin: 0;
+		overflow: hidden;
+		padding: 0;
+	}
+
+	ul.content-flickr li {
+		display: block;
+		float: left;
+		padding: 5px 10px 5px 0;
+		width: 33.33%;
+	}
+
+	.content-flickr li a {
+		display: block;
+		position: relative;
+		width: 100%;
+	}
+
 
 
 /* 15. FOOTER */
